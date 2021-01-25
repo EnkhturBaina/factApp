@@ -25,7 +25,7 @@ export default function CategoryCard(props) {
       {returnArray.map((prop, index) => {
         return (
           <View key={prop.index} style={styles.content}>
-            <ImageBackground source={{ uri: prop.imageURL }} style={styles.image} imageStyle={{ borderRadius: 10 }}>
+            <ImageBackground source={{ uri: prop.imageURL }} style={styles.image}>
               <Text style={styles.textStyle}>{prop.title}</Text>
             </ImageBackground>
           </View>
@@ -67,5 +67,9 @@ const styles = StyleSheet.create({
     color: "#deb887",
     fontWeight: "bold",
     fontSize: 16,
+    textAlign: "center",
+    textAlignVertical: "bottom",
+    flex: 1,
+    flexDirection: "row",
   },
 });
